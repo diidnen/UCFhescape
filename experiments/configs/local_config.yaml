@@ -15,7 +15,7 @@ name: hescape_default_training
 
 model:
   litmodule:
-    img_enc_name: h0-mini
+    img_enc_name: uni
     img_finetune: true
     img_proj: mlp
     gene_enc_name: generic
