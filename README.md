@@ -24,11 +24,14 @@ And you can apply for 4GPU
 So in general. The above is just the how to change the config of the experiments
 
 <img width="1627" height="704" alt="image" src="https://github.com/user-attachments/assets/3d8ffa94-34a2-4930-93ad-72887ab81c8e" />
-for here it is in hescape/src/hescape/data_modules/image_gexp_dataset.py， we need to modify it, I have uploaded the npy file
+for here it is in hescape/src/hescape/data_modules/image_gexp_dataset.py， we need to modify it, I have uploaded the npy file and you can check for nicheformer on github
+<img width="1756" height="709" alt="image" src="https://github.com/user-attachments/assets/ecc08c98-c208-4ebf-87da-e5f375a30e46" />
+
+yeah that may be all the problems I met when I use the hescape. If there are any more problems just message me on slack. As writing the code is my duty for the project. LoL
 
 
 and the running code is  "python experiments/hescape_pretrain/train.py --config-name=local_config.yaml"
 
 
 
-So now we focus on uni and 
+So now our goal is first reproduce the some results on benchmark and can u download lung and colon panel and use the image encoder (uni and conch) and gene encoder (nicheformer). Thanks a lot!
