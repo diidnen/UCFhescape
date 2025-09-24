@@ -4,7 +4,7 @@ defaults:
   - launcher: local
   - model: default
   - training: default
-  - paths: juelich
+  - paths: windows
   - datamodule: lung_healthy
   - _self_
   - override paths/anatomy: lung_healthy
@@ -18,7 +18,7 @@ model:
     img_enc_name: uni
     img_finetune: true
     img_proj: mlp
-    gene_enc_name: generic
+    gene_enc_name: nicheformer
     gene_finetune: false
     gene_proj: linear # mlp
     loss: CLIP
@@ -30,18 +30,19 @@ datamodule:
   num_workers: 4
   pin_memory: true
   persistent_workers: true
+  data_gene_reference_path: "C:/Users/ioone/PycharmProjects/moemodified/hescape/data/human-lung-healthy-panel/nicheformer_reference.h5ad"
+  nicheformer_reference_path: "C:/Users/ioone/PycharmProjects/moemodified/pretrain_weights/gene/nicheformer/model.h5ad"
+  technology_mean_path: "C:/Users/ioone/PycharmProjects/moemodified/xenium_mean_script.npy"
+
 
 training:
   lightning:
     trainer:
-      max_steps: 20_000
-      devices: ${devices_per_job}
+      max_steps: 20000
+      devices: 1          # 直接写 1
       num_nodes: 1
-      strategy: # "ddp"
-        _target_: pytorch_lightning.strategies.DDPStrategy
-        find_unused_parameters: true
-        process_group_backend: "nccl"
-      accelerator: "gpu"
+      accelerator: gpu    # 保持 gpu
+      strategy: auto      # 或者直接删掉 strategy 字段
   train: true
   test:
     false
