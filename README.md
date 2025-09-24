@@ -10,7 +10,7 @@ I put the file like this to avoid changing some code in train.py, so here create
 Nearly all the files do not change. But only changing the file in hescape/experiments/configs which is the experiment config(e.g path, model, blabla) u can see my file I have edited
 
 <img width="1666" height="397" alt="image" src="https://github.com/user-attachments/assets/d6868e4f-c7be-472a-b8d1-81663d59a073" />
-So here the only thing to do is to change the csv location on your machine(for different panal, we need to change to the real csv location on our local machine,the code in hescape is modified here)
+So here the only thing to do is to change the csv location on your machine(for different panal, we need to change to the real csv location on our local machine,I modify the code here)
 (or you can directly change the csv location in UCFhescape/experiments/configs/local_config.yaml)
 
 (So basically you can directly change the config at hescape/experiments/configs/local_config.yaml)
