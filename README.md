@@ -7,7 +7,7 @@ so you can download the data through the download.py and I use Professor's token
 I put the file like this to avoid changing some code in train.py, so here create folder like this and download model from huggingface /uni/pytorch_model.bin.
 
 
-Nearly all the files do not change. But only changing the file in hescape/experiments/configs which is the experiment config(e.g path, model, blabla)
+Nearly all the files do not change. But only changing the file in hescape/experiments/configs which is the experiment config(e.g path, model, blabla) u can see my file I have edited
 
 <img width="1666" height="397" alt="image" src="https://github.com/user-attachments/assets/d6868e4f-c7be-472a-b8d1-81663d59a073" />
 So here the only thing to do is to change the csv location on your machine(for different panal, we need to change to the real csv location on our local machine,the code in hescape is modified here)
